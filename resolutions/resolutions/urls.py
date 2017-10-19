@@ -21,5 +21,5 @@ from resolution.views import ResolutionView
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^(?:resolutions/)?admin/', admin.site.urls),
-    url(r'^(?P<id>[0-9]+)?$', ResolutionView.as_view()),
+    url(r'^$', ResolutionView.as_view()),
 ]

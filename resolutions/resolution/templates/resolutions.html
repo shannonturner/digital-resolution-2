@@ -32,6 +32,26 @@
             background-color: #5e52a4;
         }
 
+        .violet {
+            background-color: #6141f7;
+        }
+
+        .teal {
+            background-color :#30b6c8;
+        }
+
+        .light-teal {
+            background-color: #7ec8ce;
+        }
+
+        .blue {
+            background-color: #4d8eda;
+        }
+
+        .light-violet {
+            background-color: #7659f3;
+        }
+
         #count {
             font-size: 2em;
             margin-bottom: 1em;
@@ -72,7 +92,7 @@
         </div>
 
         <div id="footer">
-            What do you hope to take away from the #TechLady hackathon? <br>Text it to ###-###-####
+            What does your #TechRebalanced future look like? <br>Text it to ###-###-####
         </div>
 
     </div>
@@ -82,13 +102,13 @@
     <script type="text/javascript">
         $( document ).ready(function() {
 
-            // Page refresh every 15s
-            window.setTimeout(function () { location.reload(true) }, 15000);
+            // Page refresh every 12.5s
+            window.setTimeout(function () { location.reload(true) }, 12500);
 
             {% if show_logo_instead %}
 
                 var logos = [
-                    'https://techladyhackathon.org/images/techLady5.jpg'
+                    'https://images.squarespace-cdn.com/content/5d94f8af63895e4db96b3eb0/1570044335612-JUO3ZG88G0P73ENBBPFV/TWITTER-2.png'
                 ]
                 var logo = logos[Math.floor(Math.random() * logos.length)];
                 $("#resolution").html("<img src='" + logo + "' class='logo'>");
@@ -97,7 +117,7 @@
             {% else %}
 
                 // Apply random background color class (.pink, .sherbet, .coral, .yellow) on load
-                var colors = ['pink', 'sherbet', 'coral', 'yellow', 'purple'];
+                var colors = ['violet', 'light-violet', 'teal', 'light-teal', 'blue'];
                 var color = colors[Math.floor(Math.random() * colors.length)];
                 $("body").addClass(color);
 

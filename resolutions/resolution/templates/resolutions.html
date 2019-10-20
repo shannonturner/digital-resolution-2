@@ -72,9 +72,6 @@
             max-width: 100%;
         }
 
-        .logo-container {
-            text-align: center;
-        }
 
     </style>
 </head>
@@ -108,11 +105,13 @@
             {% if show_logo_instead %}
 
                 var logos = [
-                    'https://images.squarespace-cdn.com/content/5d94f8af63895e4db96b3eb0/1570044335612-JUO3ZG88G0P73ENBBPFV/TWITTER-2.png'
+                    'https://shannonvturner.com/images/tech-rebalanced-logo-tan.png',
+                    'https://shannonvturner.com/images/tech-rebalanced-sponsorslide.png',
+                    'https://shannonvturner.com/images/tech-rebalanced-follow.png'
                 ]
                 var logo = logos[Math.floor(Math.random() * logos.length)];
-                $("#resolution").html("<img src='" + logo + "' class='logo'>");
-                $("#resolution").addClass('logo-container');
+                $("body").css({"background-image": "url(" + logo + ")", "background-size": "cover"});
+                $(".resolutions").hide();
 
             {% else %}
 
